@@ -59,7 +59,7 @@ def audio(base, sid, data=None):
 def test_frontend_and_health(server):
     base, _ = server
     assert requests.get(base + "/").status_code == 200
-    assert "BoloBharo" in requests.get(base + "/").text
+    assert "Vaani" in requests.get(base + "/").text
     assert requests.get(base + "/app.js").status_code == 200
     assert requests.get(base + "/style.css").status_code == 200
     h = requests.get(base + "/api/health").json()

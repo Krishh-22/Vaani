@@ -42,7 +42,7 @@ class Looping(FakeGnani):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", sys.argv[1] if len(sys.argv) > 1 else 8010))
     # The fake voice is a beep. Keep it OUT of the real TTS cache, or the real server would replay beeps.
-    settings.tts_cache_dir = Path(tempfile.mkdtemp(prefix="bolobharo-fake-tts-"))
+    settings.tts_cache_dir = Path(tempfile.mkdtemp(prefix="vaani-fake-tts-"))
     main.service.gnani = Looping()
     print(f"Fake-Gnani demo on http://127.0.0.1:{port}  (scripted answers, no credits used)")
     uvicorn.run(main.app, host="127.0.0.1", port=port, log_level="warning")

@@ -4,7 +4,7 @@
 
 Filling a government form is hard if reading and typing are hard.
 
-So I built BoloBharo (बोलो भरो): you talk, the form fills itself.
+So I built Vaani (वाणी): you talk, the form fills itself.
 
 🎙️ Speak in Hindi, English or Hinglish
 🔁 It reads every answer back, so wrong numbers don't slip through
@@ -26,7 +26,7 @@ Try the demo / code: [link]
 
 You talk. The form fills itself. 🎙️📄
 
-BoloBharo: Hindi / English / Hinglish voice form filler. It reads every answer back, fixes "5 nahi 6" by digit, and checks Aadhaar with Verhoeff.
+Vaani: Hindi / English / Hinglish voice form filler. It reads every answer back, fixes "5 nahi 6" by digit, and checks Aadhaar with Verhoeff.
 
 Built from Lucknow on @GnaniAI Prisma + Timbre.
 [video]

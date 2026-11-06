@@ -11,7 +11,7 @@ from .dialogue import Session, DONE
 from .gnani import GnaniClient, GnaniError
 from .pdf import build_pdf
 
-log = logging.getLogger("bolobharo")
+log = logging.getLogger("vaani")
 
 MAX_AUDIO_BYTES = 3 * 1024 * 1024
 

@@ -2,8 +2,8 @@
 
 STR = {
     "greeting": {
-        "hi": "नमस्ते! मैं बोलो भरो हूँ। मैं आपका छात्रवृत्ति फ़ॉर्म बोलकर भरने में मदद करूँगी। हर जवाब के बाद मैं उसे दोहराऊँगी, तब आप हाँ या नहीं कहिए।",
-        "en": "Hello! I'm BoloBharo. I'll help you fill your scholarship form just by talking. After every answer I'll read it back, and you can say yes or no.",
+        "hi": "नमस्ते! मैं वाणी हूँ। मैं आपका छात्रवृत्ति फ़ॉर्म बोलकर भरने में मदद करूँगी। हर जवाब के बाद मैं उसे दोहराऊँगी, तब आप हाँ या नहीं कहिए।",
+        "en": "Hello! I'm Vaani. I'll help you fill your scholarship form just by talking. After every answer I'll read it back, and you can say yes or no.",
     },
     "ack": {"hi": "धन्यवाद।", "en": "Thank you."},
     "retry": {"hi": "ठीक है, दोबारा बताइए।", "en": "Okay, please tell me again."},

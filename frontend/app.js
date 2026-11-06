@@ -1,4 +1,4 @@
-// BoloBharo frontend. Plain ES module, no build step.
+// Vaani frontend. Plain ES module, no build step.
 //
 // Flow of one turn:
 //   mic tap -> record (16 kHz mono WAV, made in the browser) -> POST /audio -> server runs Prisma

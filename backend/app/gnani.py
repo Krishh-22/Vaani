@@ -12,7 +12,7 @@ import requests
 
 from .config import settings
 
-log = logging.getLogger("bolobharo.gnani")
+log = logging.getLogger("vaani.gnani")
 
 
 class GnaniError(Exception):

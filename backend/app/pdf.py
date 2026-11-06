@@ -25,7 +25,7 @@ def build_pdf(form: dict, values: dict, today: date = None) -> bytes:
     buf = io.BytesIO()
     doc = SimpleDocTemplate(buf, pagesize=A4, leftMargin=22 * mm, rightMargin=22 * mm,
                             topMargin=20 * mm, bottomMargin=18 * mm,
-                            title=f"{form['title']['en']} - filled by voice", author="BoloBharo")
+                            title=f"{form['title']['en']} - filled by voice", author="Vaani")
     h1 = ParagraphStyle("h1", fontName="Helvetica-Bold", fontSize=20, textColor=INK, spaceAfter=2)
     sub = ParagraphStyle("sub", fontName="Helvetica", fontSize=9.5, textColor=colors.HexColor("#5b6478"), spaceAfter=10)
     cell = ParagraphStyle("cell", fontName="Helvetica", fontSize=11, textColor=INK, leading=14)
@@ -48,7 +48,7 @@ def build_pdf(form: dict, values: dict, today: date = None) -> bytes:
 
     story = [
         Paragraph(form["title"]["en"], h1),
-        Paragraph(f"Form filled by voice with BoloBharo (Gnani Prisma + Timbre) on {today.strftime('%d %B %Y')}", sub),
+        Paragraph(f"Form filled by voice with Vaani (Gnani Prisma + Timbre) on {today.strftime('%d %B %Y')}", sub),
         table,
         Spacer(1, 14 * mm),
         Paragraph("I declare that the information given above is true to the best of my knowledge.", small),

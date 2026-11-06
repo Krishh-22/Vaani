@@ -1,4 +1,4 @@
-# BoloBharo (बोलो भरो) — fill a form by talking
+# Vaani (वाणी) — fill a form by talking
 
 A voice-first scholarship application for people who find reading and typing hard. The app asks one
 question at a time in Hindi, English or Hinglish, **reads every answer back**, and waits for a yes or no.
@@ -7,7 +7,7 @@ Built for the Great Indian AI Internship Challenge on Gnani's **Prisma** (speech
 ## Run it (5 minutes)
 
 ```bash
-cd bolobharo
+cd vaani
 python -m venv .venv && source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 cp .env.example .env                                     # then paste your key into GNANI_API_KEY

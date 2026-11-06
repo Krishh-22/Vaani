@@ -13,7 +13,7 @@ relative) using it is even better than a screen recording: it proves the point.
 | Time | On screen | What you say / do |
 |---|---|---|
 | 0-5 s | Text card or you holding a thick paper form | "Millions of people can't fill a government form because reading and typing is the hard part." |
-| 5-12 s | Landing page, tap **हिन्दी में शुरू करें** | "This is BoloBharo. You just talk." |
+| 5-12 s | Landing page, tap **हिन्दी में शुरू करें** | "This is Vaani. You just talk." |
 | 12-30 s | Name, date of birth, mobile number by voice. The form fills in live | Speak naturally in Hinglish. |
 | 30-40 s | **The correction moment** (your best 10 seconds) | App reads the phone number back; you say "5 nahi 6" and it fixes just that digit. |
 | 40-48 s | Say a **wrong Aadhaar** number | App rejects it: checksum failed. "It catches typos before they reach the form." |
