@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BoloBharo - fill forms by talking</title>
+  <meta name="description" content="Fill a scholarship application just by speaking Hindi, English or Hinglish. Built on Gnani Prisma and Timbre.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <div class="brand" aria-label="BoloBharo">
+      <span class="brand-hi" lang="hi">बोलो भरो</span>
+      <span class="brand-en">BoloBharo</span>
+    </div>
+    <div class="top-actions" id="topActions" hidden>
+      <label class="switch" title="Listen automatically after each reply">
+        <input type="checkbox" id="handsFree" checked>
+        <span id="handsFreeLabel">Hands-free</span>
+      </label>
+      <button class="link" id="restartBtn" type="button">Start over</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ---------- landing ---------- -->
+    <section class="landing" id="landing">
+      <h1 class="headline">
+        <span lang="hi">बोलिए, फ़ॉर्म अपने आप भर जाएगा।</span>
+        <span class="headline-en">Speak, and the form fills itself.</span>
+      </h1>
+      <p class="lede">A scholarship application in about two minutes, in Hindi, English or Hinglish. No typing, no reading.</p>
+      <div class="start-row">
+        <button class="start" id="startHi" type="button" lang="hi">हिन्दी में शुरू करें</button>
+        <button class="start start-alt" id="startEn" type="button">Start in English</button>
+      </div>
+      <p class="fineprint" id="landingNote">Needs your microphone. Your answers are deleted when you leave this page.</p>
+      <p class="fineprint err" id="landingError" role="alert" hidden></p>
+    </section>
+
+    <!-- ---------- session ---------- -->
+    <section class="session" id="session" hidden>
+      <div class="talk" aria-live="polite">
+        <div class="bot" id="botText"></div>
+        <div class="heard" id="heard" hidden>
+          <span class="heard-label" id="heardLabel">You said</span>
+          <q id="heardText"></q>
+        </div>
+
+        <div class="mic-wrap">
+          <button class="mic" id="mic" type="button" aria-label="Talk">
+            <span class="ring" aria-hidden="true"></span>
+            <svg class="mic-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V22h2v-3.08A7 7 0 0 0 19 12h-2Z"/></svg>
+            <span class="spin" aria-hidden="true"></span>
+          </button>
+          <p class="status" id="status">Tap to talk</p>
+        </div>
+
+        <form class="typebox" id="typeForm" autocomplete="off">
+          <label class="visually-hidden" for="typeInput" id="typeLabel">Type your answer</label>
+          <input id="typeInput" type="text" inputmode="text" placeholder="Or type your answer here" enterkeyhint="send">
+          <button type="submit" id="typeSend">Send</button>
+        </form>
+        <p class="toast" id="toast" role="alert" hidden></p>
+      </div>
+
+      <aside class="sheet-wrap" aria-label="Application form">
+        <div class="sheet" id="sheet">
+          <div class="sheet-head">
+            <h2 id="sheetTitle">Scholarship Application</h2>
+            <p class="count" id="sheetCount">0 of 8</p>
+          </div>
+          <div class="meter" aria-hidden="true"><i id="meterBar"></i></div>
+          <ol class="rows" id="rows"></ol>
+          <div class="sheet-foot" id="sheetFoot" hidden>
+            <a class="download" id="pdfLink" href="#" download>Download PDF</a>
+            <button class="link" id="deleteBtn" type="button">Delete my data</button>
+          </div>
+        </div>
+        <p class="fineprint" id="privacyNote">Answers stay in memory only and are deleted after 30 minutes or when you leave.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Voice by <a href="https://gnani.ai" target="_blank" rel="noopener">Gnani</a> Prisma (listening) and Timbre (speaking)</span>
+    <span>#GnaniAI #GreatIndianAIInternshipChallenge</span>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Versions this project was built and tested with (Python 3.13). Newer minor versions should work.
+starlette>=1.7
+uvicorn>=0.54
+python-multipart>=0.0.32     # Starlette needs this to read the uploaded recording
+requests>=2.32
+reportlab>=5.0               # the filled PDF
+# only for running the tests
+pytest>=9.0
+pypdf>=6.0

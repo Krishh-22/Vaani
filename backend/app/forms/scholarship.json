@@ -1,0 +1,97 @@
+{
+  "id": "scholarship",
+  "title": {"en": "Scholarship Application", "hi": "छात्रवृत्ति आवेदन"},
+  "stt_topic": "Scholarship application form: name, date of birth, mobile number, Aadhaar number, PIN code, category, family income, course",
+  "fields": [
+    {
+      "id": "name", "type": "name",
+      "label": {"en": "Full name", "hi": "पूरा नाम"},
+      "prompt": {"en": "What is your full name?", "hi": "आपका पूरा नाम क्या है?"},
+      "confirm": {"en": "Your name is {v}. Is that correct?", "hi": "आपका नाम {v} है। क्या यह सही है?"},
+      "stt_format": "transliterate"
+    },
+    {
+      "id": "dob", "type": "date", "min_age": 15, "max_age": 35,
+      "label": {"en": "Date of birth", "hi": "जन्मतिथि"},
+      "prompt": {"en": "What is your date of birth? For example, fifteen August two thousand five.",
+                 "hi": "आपकी जन्मतिथि क्या है? जैसे, पंद्रह अगस्त दो हज़ार पाँच।"},
+      "confirm": {"en": "Your date of birth is {v}. Is that correct?", "hi": "आपकी जन्मतिथि {v} है। क्या यह सही है?"},
+      "stt_format": "transcribe",
+      "keyterms": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    },
+    {
+      "id": "phone", "type": "digits", "length": 10, "first_digits": "6789", "strip_country_code": true, "group": [5, 5],
+      "label": {"en": "Mobile number", "hi": "मोबाइल नंबर"},
+      "prompt": {"en": "Please say your ten digit mobile number.", "hi": "अपना दस अंकों का मोबाइल नंबर बोलिए।"},
+      "confirm": {"en": "Your mobile number is {v}. Is that correct?", "hi": "आपका मोबाइल नंबर {v} है। क्या यह सही है?"},
+      "stt_format": "transcribe"
+    },
+    {
+      "id": "aadhaar", "type": "digits", "length": 12, "verhoeff": true, "not_first_digits": "01", "group": [4, 4, 4], "mask": true,
+      "label": {"en": "Aadhaar number", "hi": "आधार नंबर"},
+      "prompt": {"en": "Now your twelve digit Aadhaar number. Say it slowly, a few digits at a time.",
+                 "hi": "अब अपना बारह अंकों का आधार नंबर बोलिए। धीरे-धीरे, चार-चार अंक करके।"},
+      "confirm": {"en": "Your Aadhaar number is {v}. Is that correct?", "hi": "आपका आधार नंबर {v} है। क्या यह सही है?"},
+      "stt_format": "transcribe"
+    },
+    {
+      "id": "pincode", "type": "digits", "length": 6, "not_first_digits": "0", "group": [3, 3],
+      "label": {"en": "PIN code", "hi": "पिन कोड"},
+      "prompt": {"en": "What is the six digit PIN code of your home address?", "hi": "आपके घर का छह अंकों का पिन कोड क्या है?"},
+      "confirm": {"en": "Your PIN code is {v}. Is that correct?", "hi": "आपका पिन कोड {v} है। क्या यह सही है?"},
+      "stt_format": "transcribe"
+    },
+    {
+      "id": "category", "type": "choice",
+      "label": {"en": "Category", "hi": "श्रेणी"},
+      "prompt": {"en": "Which category do you belong to? {options}?", "hi": "आप किस श्रेणी में आते हैं? {options}?"},
+      "confirm": {"en": "Your category is {v}. Is that correct?", "hi": "आपकी श्रेणी {v} है। क्या यह सही है?"},
+      "stt_format": "codemix",
+      "options": [
+        {"value": "general", "label": {"en": "General", "hi": "General"}, "speech": {"en": "General", "hi": "जनरल"},
+         "synonyms": ["general", "gen", "jenral", "janral", "genral", "unreserved", "open", "सामान्य", "जनरल", "जेनरल"]},
+        {"value": "obc", "label": {"en": "OBC", "hi": "OBC"}, "speech": {"en": "O B C", "hi": "ओ बी सी"},
+         "synonyms": ["obc", "other backward", "backward", "ओबीसी", "पिछड़ा", "पिछड़ी"]},
+        {"value": "sc", "label": {"en": "SC", "hi": "SC"}, "speech": {"en": "S C", "hi": "एस सी"},
+         "synonyms": ["sc", "scheduled caste", "एससी", "अनुसूचित जाति"]},
+        {"value": "st", "label": {"en": "ST", "hi": "ST"}, "speech": {"en": "S T", "hi": "एस टी"},
+         "synonyms": ["st", "scheduled tribe", "एसटी", "जनजाति", "आदिवासी", "tribal"]}
+      ],
+      "keyterms": ["General", "OBC", "SC", "ST"]
+    },
+    {
+      "id": "income", "type": "amount", "min": 0, "max": 100000000,
+      "label": {"en": "Annual family income", "hi": "सालाना पारिवारिक आय"},
+      "prompt": {"en": "What is your family's total income for one year? For example, two lakh fifty thousand.",
+                 "hi": "आपके परिवार की सालाना आमदनी कितनी है? जैसे, दो लाख पचास हज़ार।"},
+      "confirm": {"en": "Your family income is {v} per year. Is that correct?", "hi": "आपके परिवार की सालाना आमदनी {v} है। क्या यह सही है?"},
+      "stt_format": "transcribe"
+    },
+    {
+      "id": "course", "type": "choice",
+      "label": {"en": "Course", "hi": "कोर्स"},
+      "prompt": {"en": "Which course are you studying? {options}?", "hi": "आप कौन सा कोर्स कर रहे हैं? {options}?"},
+      "confirm": {"en": "Your course is {v}. Is that correct?", "hi": "आपका कोर्स {v} है। क्या यह सही है?"},
+      "stt_format": "codemix",
+      "options": [
+        {"value": "btech", "label": {"en": "B.Tech", "hi": "B.Tech"}, "speech": {"en": "B Tech", "hi": "बी टेक"},
+         "synonyms": ["btech", "b tech", "बीटेक", "बी टेक", "bachelor of technology", "engineering", "इंजीनियरिंग"]},
+        {"value": "bsc", "label": {"en": "B.Sc", "hi": "B.Sc"}, "speech": {"en": "B S C", "hi": "बी एस सी"},
+         "synonyms": ["bsc", "b sc", "बीएससी", "बी एससी", "बी एस सी", "bachelor of science"]},
+        {"value": "bcom", "label": {"en": "B.Com", "hi": "B.Com"}, "speech": {"en": "B Com", "hi": "बी कॉम"},
+         "synonyms": ["bcom", "b com", "बीकॉम", "बी कॉम", "bachelor of commerce"]},
+        {"value": "ba", "label": {"en": "B.A.", "hi": "B.A."}, "speech": {"en": "B A", "hi": "बी ए"},
+         "synonyms": ["ba", "b a", "बीए", "बी ए", "bachelor of arts"]},
+        {"value": "bca", "label": {"en": "BCA", "hi": "BCA"}, "speech": {"en": "B C A", "hi": "बी सी ए"},
+         "synonyms": ["bca", "बीसीए", "बी सी ए"]},
+        {"value": "bba", "label": {"en": "BBA", "hi": "BBA"}, "speech": {"en": "B B A", "hi": "बी बी ए"},
+         "synonyms": ["bba", "बीबीए", "बी बी ए"]},
+        {"value": "mba", "label": {"en": "MBA", "hi": "MBA"}, "speech": {"en": "M B A", "hi": "एम बी ए"},
+         "synonyms": ["mba", "एमबीए", "एम बी ए"]},
+        {"value": "diploma", "label": {"en": "Diploma", "hi": "Diploma"}, "speech": {"en": "Diploma", "hi": "डिप्लोमा"},
+         "synonyms": ["diploma", "डिप्लोमा", "polytechnic", "पॉलिटेक्निक"]}
+      ],
+      "keyterms": ["B.Tech", "B.Sc", "B.Com", "BA", "BCA", "BBA", "MBA", "Diploma"]
+    }
+  ]
+}
