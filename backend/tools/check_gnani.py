@@ -22,7 +22,7 @@ OUT = Path(__file__).parent / "out"
 PHONE = "9876543210"
 CASES = [
     ("phone_hi", "hi-IN", "आपका मोबाइल नंबर " + speak.speak_digits(PHONE, "hi", [5, 5]) + " है।", PHONE),
-    ("hinglish", "hi-en", "मेरा नाम Krishna Kumar है और मैं Lucknow से हूँ।", "Krishna Kumar"),
+    ("hinglish", "hi-en", "मेरा नाम Krishna है और मैं Lucknow से हूँ।", "Krishna"),
     ("income_hi", "hi-IN", "सालाना आमदनी " + speak.speak_amount(250000, "hi"), "250000"),
 ]
 FORMATS = ["verbatim", "transcribe", "codemix", "transliterate"]

@@ -20,7 +20,7 @@ from tests.fake_gnani import FakeGnani
 
 AADHAAR = verhoeff.make_valid_aadhaar("23456789012")
 SCRIPT = [
-    "mera naam Krishna Kumar hai", "haan",
+    "mera naam Krishna hai", "haan",
     "pandrah august do hazaar paanch", "haan",
     "nau aath saat chhah paanch char teen do ek shunya", "5 nahi 6", "haan",
     " ".join(AADHAAR[i:i + 4] for i in (0, 4, 8)), "haan",
